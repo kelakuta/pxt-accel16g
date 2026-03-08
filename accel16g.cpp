@@ -1,14 +1,20 @@
-#include "MicroBit.h"
+#include "pxt.h"
 
-extern MicroBit uBit;
+using namespace pxt;
 
 namespace accel16g {
+
     //%
     void enable16g() {
-        const uint8_t CTRL_REG4_A = 0x23;
-        uint8_t data[2];
-        data[0] = CTRL_REG4_A;
-        data[1] = 0x30;
-        uBit.i2c.write(0x32, (char*)data, 2);
+
+        const uint8_t addr = 0x32;
+        const uint8_t reg = 0x23;
+
+        uint8_t buf[2];
+        buf[0] = reg;
+        buf[1] = 0x30;   // ±16g
+
+        uBit.i2c.write(addr, (char*)buf, 2);
     }
+
 }
