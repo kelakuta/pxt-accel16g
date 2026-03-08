@@ -3,12 +3,15 @@
   "version": "0.0.1",
   "description": "Enable 16g accelerometer mode on micro:bit",
   "license": "MIT",
+  "target": "microbit",
   "dependencies": {
     "device": "*"
   },
-  "target": "microbit",
   "files": [
     "accel16g.ts",
     "accel16g.cpp"
+  ],
+  "testFiles": [
+    "test.ts"
   ]
 }
