@@ -1,0 +1,12 @@
+{
+    "name": "pxt-accel16g",
+    "version": "0.0.1",
+    "description": "Enable 16g accelerometer mode on micro:bit",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "accel16g.ts",
+        "accel16g.cpp"
+    ]
+}
